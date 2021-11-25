@@ -27,8 +27,6 @@ def processAll(lstPets):
         pet.setAccordance(compareImages(pet.getImagePath()))
         #print(pet.outAll())
 
-
-
 def cropImage(imgPath="Crop.png"):
     imgRaw = cv2.imread(imgPath)
     imgRaw = cv2.cvtColor(imgRaw, cv2.COLOR_BGR2RGB)
@@ -70,3 +68,4 @@ for pet in lstPets:
 print("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         "Runtime: ",datetime.now() - starttime, "min\n"
         "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print("Test")
