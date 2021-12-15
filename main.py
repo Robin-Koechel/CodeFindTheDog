@@ -8,7 +8,7 @@ from datetime import datetime
 from PIL import Image
 
 
-imgPath = "F:\PYTHON\Projekte\FindTheDog\ImageProcessing\TestImages\\forestCat.jpg" #Input image
+imgPath = "F:\PYTHON\Projekte\FindTheDog\ImageProcessing\TestImages\myCat5.jpeg" #Input image
 imgCropPath = "F:\PYTHON\Projekte\FindTheDog\Crop.png";
 
 

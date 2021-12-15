@@ -5,8 +5,6 @@ import torchvision.transforms as transforms
 from torch.autograd import Variable
 from PIL import Image
 import cv2
-import ImageProcessing.ClassifyPretrained.ClassifyPre
-import ImageProcessing.SegmentationPretrained.fcnResNet
 
 #vector stuff
 class compareImages():
@@ -69,13 +67,14 @@ class compareImages2():
             for m in matches[:obergrenze]:
                 print(m.distance)
 
-        def showImageWithFeatures(countFeatures):
+        def showImageWithFeatures(countFeatures):#number of ploted features/points
             #print features on image
             matching_result = cv2.drawMatches(img1, kp1, img2, kp2, matches[:countFeatures], None, flags=2)
-            cv2.imshow("res", matching_result)
+            cv2.imshow("features", matching_result)
             cv2.waitKey(0)
             cv2.destroyAllWindows()
 
+        #showImageWithFeatures(100)#number of ploted features/points
         for m in matches:
             res.append(m.distance)
 
@@ -85,4 +84,5 @@ class compareImages2():
 #print('\nImages match to '+str(round(float(comp.compareVectors()*100),2)).strip("tensor([").strip("])")+"% überein")
 
 #comp = compareImages2()
-#comp.featureDetector()
+#comp.featureDetector("F:\PYTHON\Projekte\FindTheDog\ImageProcessing\TestImages\myCat5.jpeg",
+                     #"F:\PYTHON\Projekte\FindTheDog\ImageProcessing\TestImages\myCat5.jpeg")

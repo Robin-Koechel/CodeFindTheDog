@@ -59,7 +59,7 @@ class SegmentationPretrained:
         try:
             return img, pred_cls[counter], boxes,counter
         except IndexError:
-            print("No animals at this photo! Try again")
+            print("No pet at this photo! Try again")
 
 #seg = SegmentationPretrained('F:\PYTHON\Projekte\FindTheDog\ClassifyPretrained\img\MenschHund.jpg')
 #seg.instance_segmentation()#call function
